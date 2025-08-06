@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
+import DownloadResume from '../../../components/downloadResume';
 
 const AboutPreview = () => {
-  const downloadResume = () => {
-    alert('Resume download would start here. In a real implementation, this would download the actual PDF file.');
-  };
+  
 
   return (
     <section className="py-20 bg-surface">
@@ -22,15 +21,7 @@ const AboutPreview = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/about" className="btn-primary">Learn More About Me</Link>
-              <button 
-                onClick={downloadResume}
-                className="btn-outline flex items-center justify-center"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-                Download Resume
-              </button>
+              <DownloadResume />
             </div>
           </div>
           

@@ -19,7 +19,7 @@ const BlogPreview = () => {
       date: "January 10, 2025",
       readTime: "8 min read",
       category: "UX Strategy",
-      image: "https://images.pixabay.com/photo-2016/11/19/14/00/code-1839406_1280.jpg",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop",
       alt: "UX Strategy Guide"
     },
     {
@@ -29,7 +29,7 @@ const BlogPreview = () => {
       date: "January 5, 2025",
       readTime: "6 min read",
       category: "Branding",
-      image: "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2340&auto=format&fit=crop",
       alt: "Brand Strategy"
     }
   ];

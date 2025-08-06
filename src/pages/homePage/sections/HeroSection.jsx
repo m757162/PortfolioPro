@@ -26,7 +26,7 @@ const HeroSection = () => {
       gradient: "from-primary-900/80"
     },
     {
-      image: "https://images.pixabay.com/photo-2016/11/29/06/15/plans-1867745_1280.jpg",
+      image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       alt: "Brand Identity Design",
       title: "Brand Transformation",
       subtitle: "Complete visual identity overhaul",

@@ -20,7 +20,7 @@ const InsightsPage = () => {
       title: "AI's Impact on Creative Workflows: Threat or Opportunity?",
       excerpt: "Examining how artificial intelligence is reshaping creative processes and what it means for designers, developers, and creative professionals in 2025.",
       readTime: '8 min read',
-      image: 'https://images.pixabay.com/photo-2016/11/19/14/00/code-1839406_1280.jpg',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop',
       comments: '24'
     },
     {
@@ -31,7 +31,7 @@ const InsightsPage = () => {
       title: "Advanced Figma Techniques: Auto-Layout Mastery",
       excerpt: "Master Figma's auto-layout feature with practical examples and downloadable templates. Perfect for creating responsive designs efficiently.",
       readTime: '15 min read',
-      image: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg',
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2340&auto=format&fit=crop',
       likes: '89',
       isFreeDownload: true,
       isVideo: true
@@ -55,7 +55,7 @@ const InsightsPage = () => {
       title: "Behind the Scenes: My Design Process Revealed",
       excerpt: "An honest look at my creative process, from initial client brief to final delivery. Including the messy parts, iterations, and lessons learned.",
       readTime: '6 min read',
-      image: 'https://images.pixabay.com/photo-2016/11/29/06/15/plans-1867745_1280.jpg',
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2340&auto=format&fit=crop',
       likes: '67'
     },
     {
@@ -535,7 +535,7 @@ const InsightsPage = () => {
           </div>
           {/* Load More Button */}
           <div className="text-center mt-12">
-            <button className="btn-outline" onClick={loadMoreArticles}>
+            <button className="btn-outline flex mx-auto" onClick={loadMoreArticles}>
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
               </svg>

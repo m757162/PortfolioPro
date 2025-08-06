@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
       quote: "The redesign of our platform resulted in a 300% increase in user conversions. The attention to detail and strategic thinking exceeded all expectations.",
       author: "Sarah Johnson",
       position: "CEO, TechStart Solutions",
-      image: "https://images.pixabay.com/photo-2016/11/21/12/42/beard-1845166_1280.jpg",
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop"
     },
     {
@@ -39,14 +39,14 @@ const TestimonialsSection = () => {
       author: "Michael Chen",
       position: "CTO, HealthTech Innovations",
       image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      logo: "https://images.pixabay.com/photo-2017/03/16/21/18/logo-2150297_1280.png"
+      logo: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop"
     },
     {
       id: 3,
       quote: "The brand identity work was exceptional. Our brand recognition increased by 200% and customer engagement doubled within three months.",
       author: "Emily Rodriguez",
       position: "Marketing Director, FinanceFlow",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2340&auto=format&fit=crop",
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       logo: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     }
   ];

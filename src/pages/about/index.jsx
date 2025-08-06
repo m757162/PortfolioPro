@@ -1,29 +1,10 @@
 // AboutPage.jsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import DownloadResume from '../../components/downloadResume';
 
 const AboutPage = () => {
   const [skillBarsAnimated, setSkillBarsAnimated] = useState(false);
-
-  // Download Resume Function
-  const downloadResume = () => {
-    // Create multiple format options
-    const formats = [
-      { name: 'PDF Format', file: 'Portfolio_Pro_Resume.pdf' },
-      { name: 'Word Format', file: 'Portfolio_Pro_Resume.docx' },
-      { name: 'Plain Text', file: 'Portfolio_Pro_Resume.txt' }
-    ];
-    // Show format selection (in real implementation, this would be a modal)
-    const selectedFormat = confirm('Download resume in PDF format? (Click OK for PDF, Cancel to see other options)');
-
-    if (selectedFormat) {
-      // Simulate PDF download
-      alert('PDF resume download would start here. In a real implementation, this would download the actual PDF file.');
-    } else {
-      // Show other format options
-      alert('Other formats available:\n- Microsoft Word (.docx)\n- Plain Text (.txt)\n\nIn a real implementation, users could select their preferred format.');
-    }
-  };
 
   // Skills Animation on Scroll
   useEffect(() => {
@@ -112,7 +93,7 @@ const AboutPage = () => {
           <svg className="w-full h-full" viewBox="0 0 100 100" fill="none">
             <defs>
               <pattern id="hero-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5" />
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.5" />
               </pattern>
             </defs>
             <rect width="100" height="100" fill="url(#hero-grid)" />
@@ -133,12 +114,7 @@ const AboutPage = () => {
                 Every great design starts with a story. Mine began with a simple belief: that exceptional digital experiences have the power to transform businesses and touch lives in meaningful ways.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button onClick={downloadResume} className="btn-primary flex items-center justify-center">
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  Download Resume
-                </button>
+                <DownloadResume btnPrimary />
                 <Link to="/contact" className="btn-outline">Let's Connect</Link>
               </div>
             </div>
@@ -146,7 +122,19 @@ const AboutPage = () => {
             {/* <!-- Right Content - Professional Photo --> */}
             <div className="relative">
               <div className="relative z-10">
-                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Professional portrait in creative workspace" className="w-full max-w-md mx-auto rounded-lg shadow-primary" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2340&auto=format&fit=crop'; this.onerror=null;" />
+
+
+                <img
+                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="Professional portrait in creative workspace"
+                  className="w-full max-w-md mx-auto rounded-lg shadow-primary"
+                  loading="lazy"
+                  onError={(e) => {
+                    e.target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2340&auto=format&fit=crop';
+                    e.target.onError = null;
+                  }}
+                />
+
               </div>
               {/* <!-- Decorative Elements --> */}
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full opacity-20"></div>
@@ -203,17 +191,47 @@ const AboutPage = () => {
 
               <div className="space-y-4">
                 <div className="relative overflow-hidden rounded-lg">
-                  <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2340&auto=format&fit=crop" alt="Creative workspace with design sketches" className="w-full h-32 object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+
+                  <img
+                    src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2340&auto=format&fit=crop"
+                    alt="Professional portrait in creative workspace"
+                    className="w-full h-32 object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2340&auto=format&fit=crop';
+                      e.target.onError = null;
+                    }}
+                  />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
                 <div className="relative overflow-hidden rounded-lg">
-                  <img src="https://images.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg" alt="Strategy session with client" className="w-full h-32 object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2340&auto=format&fit=crop'; this.onerror=null;" />
+
+                  <img
+                    src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Professional portrait in creative workspace"
+                    className="w-full h-32 object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2340&auto=format&fit=crop';
+                      e.target.onError = null;
+                    }}
+                  />
                   <div className="absolute inset-0 bg-secondary/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
                 <div className="relative overflow-hidden rounded-lg">
-                  <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Speaking at design conference" className="w-full h-32 object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/02/19/11/19/office-1209640_1280.jpg'; this.onerror=null;" />
+
+                  <img
+                    src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2340&auto=format&fit=crop"
+                    alt="Professional portrait in creative workspace"
+                    className="w-full h-32 object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2340&auto=format&fit=crop';
+                      e.target.onError = null;
+                    }}
+                  />
                   <div className="absolute inset-0 bg-accent/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
@@ -631,7 +649,7 @@ const AboutPage = () => {
             {/* Interest 1 */}
             <div className="card card-hover text-center group">
               <div className="relative overflow-hidden rounded-lg mb-6">
-                <img src="https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Photography equipment and landscape" className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2340&auto=format&fit=crop" alt="Photography equipment and landscape" className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 className="font-montserrat font-semibold text-text-primary mb-3">Photography</h3>
@@ -640,7 +658,7 @@ const AboutPage = () => {
             {/* Interest 2 */}
             <div className="card card-hover text-center group">
               <div className="relative overflow-hidden rounded-lg mb-6">
-                <img src="https://images.pixabay.com/photo-2016/11/29/13/14/attractive-1869761_1280.jpg" alt="Mentoring session with young designers" className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                <img src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mentoring session with young designers" className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                 <div className="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 className="font-montserrat font-semibold text-text-primary mb-3">Mentoring</h3>
@@ -753,7 +771,7 @@ const AboutPage = () => {
           <svg className="w-full h-full" viewBox="0 0 100 100" fill="none">
             <defs>
               <pattern id="cta-grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" />
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.5" />
               </pattern>
             </defs>
             <rect width="100" height="100" fill="url(#cta-grid)" />

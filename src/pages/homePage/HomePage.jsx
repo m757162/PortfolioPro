@@ -12,7 +12,7 @@ import StickyContactCTA from './sections/StickyContactCTA';
 const HomePage = () => {
   return (
     <>
-      <Header />
+      
       <HeroSection />
       <SkillsSection />
       <ProjectsSection />
@@ -20,8 +20,7 @@ const HomePage = () => {
       <TestimonialsSection />
       <BlogPreview />
       <CTASection />
-      <Footer />
-      <StickyContactCTA />
+     
     </>
   );
 };

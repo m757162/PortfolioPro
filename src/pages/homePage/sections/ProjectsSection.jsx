@@ -16,7 +16,7 @@ const ProjectsSection = () => {
       category: 'tech',
       tags: ['UI/UX', 'React'],
       year: '2025',
-      image: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=2340&auto=format&fit=crop',
       alt: 'SaaS Dashboard Design',
       categoryLabel: 'SaaS Platform'
     },
@@ -27,7 +27,7 @@ const ProjectsSection = () => {
       category: 'healthcare',
       tags: ['Mobile', 'HIPAA'],
       year: '2024',
-      image: 'https://images.pixabay.com/photo-2017/10/04/09/56/laboratory-2815641_1280.jpg',
+      image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       alt: 'Healthcare App Design',
       categoryLabel: 'Healthcare'
     },

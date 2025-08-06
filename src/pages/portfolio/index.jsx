@@ -135,7 +135,7 @@ const PortfolioGallery = () => {
             industry: 'healthcare',
             type: 'branding',
             year: '2024',
-            image: 'https://images.pixabay.com/photo/2017/10/04/09/56/laboratory-2815641_1280.jpg',
+            image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
             metrics: [
                 { value: '60%', label: 'Faster Booking' },
                 { value: '94%', label: 'User Satisfaction' },
@@ -174,7 +174,7 @@ const PortfolioGallery = () => {
             industry: 'tech',
             type: 'ux-ui',
             year: '2024',
-            image: 'https://images.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg',
+            image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
             technologies: ['React Native', 'Charts', 'Real-time']
         },
         {
@@ -405,21 +405,13 @@ const PortfolioGallery = () => {
                                 {featuredProjects.map(project => (
                                     <div key={project.id} className="project-card featured-project group relative overflow-hidden rounded-lg shadow-primary bg-surface">
                                         <div className="relative h-80 overflow-hidden">
+                                        
                                             <img
                                                 src={project.image}
-                                                alt={project.title}
+                                                alt={project.title }
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                                 loading="lazy"
-                                            />
-
-                                            {/* Video Play Button Overlay */}
-                                            <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                                <button className="bg-white/90 rounded-full p-4 hover:bg-white transition-colors duration-300" onClick={() => playProjectVideo(project.id)}>
-                                                    <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                                                    </svg>
-                                                </button>
-                                            </div>
+                                            />                                         
                                             {/* Featured Badge */}
                                             <div className="absolute top-4 left-4">
                                                 <span className="bg-accent text-primary text-xs font-montserrat font-bold px-3 py-1 rounded-full shadow-sm">
@@ -523,7 +515,7 @@ const PortfolioGallery = () => {
                                         {/* Hover Overlay */}
                                         <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                             <div className="text-center text-white p-4">
-                                                <h4 className="font-montserrat font-semibold text-lg mb-2">{project.title}</h4>
+                                                <h4 className="font-montserrat font-semibold text-lg mb-2 text-white">{project.title}</h4>
                                                 <p className="text-sm mb-3">{project.description}</p>
                                             </div>
                                         </div>
