@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import {Routes, Route } from 'react-router-dom';
 import './App.css'
-import HomePage from './pages/homePage/HomePage'
+import HomePage from './pages/home/HomePage'
 import PortfolioGallery from './pages/portfolio'
 import MainLayout from './components/layout';
 import AboutPage from './pages/about';
@@ -15,24 +15,16 @@ function App() {
 
   return (
     <>
-      {/* <HomePage /> */}
-      {/* <PortfolioGallery /> */}
     
         <Routes>
-
-         
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/portfolio" element={<PortfolioGallery />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/insights" element={<InsightsPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            
+            <Route path="/services" element={<ServicesPage />} />           
           </Route>
-
-         
-        
         </Routes>
     
     </>

@@ -80,7 +80,7 @@ const HeroSection = () => {
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${item.gradient} to-transparent`}></div>
                   <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-xl font-montserrat font-semibold mb-2">{item.title}</h3>
+                    <h3 className="text-xl font-montserrat font-semibold mb-2 text-white">{item.title}</h3>
                     <p className="text-sm opacity-90">{item.subtitle}</p>
                   </div>
                 </div>
